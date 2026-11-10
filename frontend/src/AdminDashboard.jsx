@@ -14,7 +14,7 @@ function AdminDashboard({ user, onLogout, onHome }) {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
 
-  const API_URL = "http://localhost:5000/api/books";
+  const API_URL = "https://pageturner-g78w.onrender.com/api/books";
 
   async function fetchBooks() {
     try {

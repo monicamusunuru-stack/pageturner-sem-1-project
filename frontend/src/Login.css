@@ -1,264 +1,148 @@
-/* ================= LOGIN PAGE ================= */
 
 .login-page {
   min-height: 100vh;
-  background: #f7f5f2;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding: 30px;
-  box-sizing: border-box;
+  background: linear-gradient(135deg, #f7f3ea 0%, #e9f1ff 100%);
+  padding: 24px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
-
-/* ================= LOGIN CARD ================= */
 
 .login-card {
-  width: 100%;
-  max-width: 430px;
-
+  width: min(100%, 440px);
   background: #ffffff;
-
-  border: 1px solid #e5e1dc;
-  border-radius: 14px;
-
-  padding: 40px;
-  box-sizing: border-box;
-
-  position: relative;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(34, 45, 60, 0.12);
+  padding: 28px 28px 24px;
 }
-
-
-/* ================= BACK BUTTON ================= */
 
 .back-btn {
+  background: transparent;
   border: none;
-  background: none;
-
-  color: #555;
-
-  font-size: 14px;
-
+  color: #4b5d7a;
+  font-size: 1rem;
   cursor: pointer;
-
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
-
-.back-btn:hover {
-  color: #111;
-}
-
-
-/* ================= LOGO ================= */
 
 .login-logo {
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: 700;
-
-  color: #222;
-
-  margin-bottom: 30px;
+  color: #1d3557;
+  margin-bottom: 18px;
+  text-align: center;
 }
-
-
-/* ================= HEADING ================= */
 
 .login-card h1 {
   margin: 0 0 8px;
-
-  font-size: 32px;
-
-  color: #222;
+  font-size: 2rem;
+  color: #0f172a;
+  text-align: center;
 }
 
 .login-subtitle {
-  margin: 0 0 30px;
-
-  color: #777;
-
-  font-size: 15px;
+  margin: 0 0 20px;
+  font-size: 0.98rem;
+  text-align: center;
+  color: #52607a;
 }
 
-
-/* ================= ERROR ================= */
+.login-error,
+.login-success {
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  font-size: 0.93rem;
+}
 
 .login-error {
-  background: #fdeaea;
-
-  color: #a52a2a;
-
-  border: 1px solid #edbaba;
-
-  padding: 12px 15px;
-
-  border-radius: 6px;
-
-  margin-bottom: 20px;
-
-  font-size: 14px;
+  background: #ffe5e5;
+  color: #b42318;
+  border: 1px solid #f7b7b7;
 }
 
-
-/* ================= INPUT GROUP ================= */
+.login-success {
+  background: #eafaf2;
+  color: #1f7a45;
+  border: 1px solid #bfe8ca;
+}
 
 .login-group {
   display: flex;
   flex-direction: column;
-
-  margin-bottom: 20px;
+  gap: 8px;
+  margin-bottom: 18px;
 }
 
 .login-group label {
-  margin-bottom: 8px;
-
-  font-size: 14px;
-
+  font-size: 0.9rem;
   font-weight: 600;
-
-  color: #444;
+  color: #1f2937;
 }
-
-
-/* ================= INPUTS ================= */
 
 .login-group input {
   width: 100%;
-
   box-sizing: border-box;
-
-  padding: 13px 14px;
-
-  border: 1px solid #d8d3cd;
-
-  border-radius: 6px;
-
-  font-size: 15px;
-
-  font-family: Arial, sans-serif;
-
+  border: 1px solid #d9dfeb;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 1rem;
   outline: none;
-
-  /* IMPORTANT */
-  color: #222222;
-
-  background-color: #ffffff;
-
-  caret-color: #222222;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-
-
-/* PLACEHOLDER */
-
-.login-group input::placeholder {
-  color: #888888;
-
-  opacity: 1;
-}
-
-
-/* WHEN CLICKED */
 
 .login-group input:focus {
-  border-color: #222222;
-
-  color: #222222;
-
-  background-color: #ffffff;
+  border-color: #5b8def;
+  box-shadow: 0 0 0 4px rgba(91, 141, 239, 0.12);
 }
-
-
-/* PASSWORD TEXT */
-
-.login-group input[type="password"] {
-  color: #222222;
-
-  background-color: #ffffff;
-}
-
-
-/* ================= LOGIN BUTTON ================= */
 
 .login-submit {
   width: 100%;
-
-  background: #222222;
-
-  color: #ffffff;
-
   border: none;
-
-  padding: 14px;
-
-  border-radius: 6px;
-
-  font-size: 15px;
-
-  font-weight: 600;
-
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2f6fed 0%, #4a7af5 100%);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 12px 18px;
   cursor: pointer;
-
-  margin-top: 5px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .login-submit:hover {
-  background: #444444;
+  opacity: 0.96;
 }
 
 .login-submit:disabled {
-  background: #888888;
-
-  cursor: not-allowed;
-}
-
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 500px) {
-
-  .login-page {
-    padding: 20px;
-  }
-
-  .login-card {
-    padding: 30px 25px;
-  }
-
-  .login-card h1 {
-    font-size: 28px;
-  }
-
-}
-
-.login-success {
-  background: #e7f8ed;
-  color: #176b37;
-  padding: 12px;
-  margin-bottom: 16px;
-  border-radius: 8px;
-  font-size: 14px;
+  opacity: 0.75;
+  cursor: wait;
 }
 
 .signup-switch {
-  text-align: center;
   margin-top: 20px;
-  font-size: 14px;
-  color: #555;
+  text-align: center;
+  color: #52607a;
+  font-size: 0.95rem;
 }
 
 .signup-link {
-  background: none;
+  background: transparent;
   border: none;
-  color: #7c3aed;
-  font-weight: 600;
+  color: #2f6fed;
+  font-weight: 700;
   cursor: pointer;
-  font-size: inherit;
+  padding: 0;
 }
 
-.signup-link:hover {
-  text-decoration: underline;
+@media (max-width: 480px) {
+  .login-card {
+    padding: 22px 18px 18px;
+  }
+
+  .login-card h1 {
+    font-size: 1.7rem;
+  }
 }
+
